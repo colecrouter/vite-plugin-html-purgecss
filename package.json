@@ -1,11 +1,12 @@
 {
-  "name": "vite-plugin-html-purgecss",
-  "version": "0.1.1",
-  "description": "Purges CSS based on HTML output",
+  "name": "vite-plugin-purgecss",
+  "version": "0.2.32",
+  "description": "PurgeCSS plugin for Vite",
   "main": "dist/index.js",
-  "author": "Jax-p",
+  "author": "Cole Crouter",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "keywords": [
     "vite",
     "vite-plugin",
@@ -13,22 +14,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jax-p/vite-plugin-html-purgecss"
+    "url": "https://github.com/Mexican-Man/vite-plugin-html-purgecss"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "prepublishOnly": "yarn build"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^16.10.8",
-    "tsup": "^5.4.0",
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "vite": "^2.0.0"
   },
   "dependencies": {
-    "purgecss": "^4.1.1",
-    "vite": "^2.6.7"
+    "purgecss": "^4.1.3",
+    "vite": "^2.0.0"
   }
 }
