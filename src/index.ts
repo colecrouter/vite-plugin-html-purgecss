@@ -1,7 +1,7 @@
 import { PurgeCSS, UserDefinedOptions } from "purgecss";
 import { OutputChunk, OutputOptions, EmittedAsset } from "rollup";
 
-export default (options: UserDefinedOptions) => {
+export default (options: Partial<UserDefinedOptions>) => {
     let _html = '';
     return {
         name: 'vite-plugin-purgecss',
