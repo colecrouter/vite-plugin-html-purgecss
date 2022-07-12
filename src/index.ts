@@ -1,12 +1,12 @@
-import { PurgeCSS } from "purgecss";
+import { PurgeCSS, UserDefinedOptions } from "purgecss";
 import { OutputChunk, OutputOptions, EmittedAsset } from "rollup";
 
-export default (options) => {
+export default (options: UserDefinedOptions) => {
     let _html = '';
     return {
         name: 'vite-plugin-purgecss',
         enforce: 'post',
-        transformIndexHtml(html) { _html += html; },
+        transformIndexHtml(html: string) { _html += html; },
         async generateBundle(_options: OutputOptions, bundle: { [fileName: string]: EmittedAsset | OutputChunk; },) {
             const cssFiles = Object.keys(bundle).filter(key => key.endsWith('.css'));
             if (!cssFiles)
