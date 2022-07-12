@@ -1,4 +1,4 @@
-import PurgeCSS, { UserDefinedOptions } from "purgecss";
+import { PurgeCSS, UserDefinedOptions } from "purgecss";
 import { OutputChunk, OutputOptions, EmittedAsset } from "rollup";
 
 export default (options: Partial<UserDefinedOptions>) => {
