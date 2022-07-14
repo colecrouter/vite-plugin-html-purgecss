@@ -6,10 +6,9 @@
       "ESNext",
       "DOM"
     ],
-    "declaration": true,
     "outDir": "dist",
     "declarationMap": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
   },
   "include": [
     "src"
